@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './client/index.js',
+    app: './index.js',
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -37,7 +37,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        include: [path.resolve(__dirname, './client')],
+        include: [path.resolve(__dirname, './')],
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|svg|otf|webp|ttf|woff|woff2)(\?.*)?$/,

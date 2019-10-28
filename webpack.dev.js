@@ -1,4 +1,5 @@
 const merge = require('webpack-merge');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const common = require('./webpack.common.js');
@@ -34,6 +35,10 @@ module.exports = merge(common, {
         'PRODUCTION': process.env.PRODUCTION,
         VERSION: JSON.stringify(require('./package.json').version),
       },
+    }),
+    new BrowserSyncPlugin({
+      files: '**/*.php',
+      proxy: 'http://localhost/wordpress',
     }),
   ],
 });
