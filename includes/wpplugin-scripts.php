@@ -24,10 +24,11 @@ function wpplugin_admin_scripts( $hook ) {
   ]);
 
   if( 'toplevel_page_wpplugin' == $hook ) {
-      wp_enqueue_script( 'wpplugin-admin' );
+      wp_enqueue_script( 'wpplugin-admin' ,'',[],'',true);
   }
 
 }
+
 add_action( 'admin_enqueue_scripts', 'wpplugin_admin_scripts' );
 
 
@@ -42,7 +43,7 @@ function wpplugin_frontend_scripts() {
   );
 
   if( is_single() ) {
-      wp_enqueue_script( 'wpplugin-frontend' );
+      wp_enqueue_script( 'wpplugin-frontend','',[],'',true );
   }
 
 }
