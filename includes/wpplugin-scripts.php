@@ -3,10 +3,19 @@
 // Conditionally load JS on plugin settings pages only
 function wpplugin_admin_scripts( $hook ) {
 
+  // wp_register_script(
+  //   'wpplugin-admin',
+  //   WPPLUGIN_URL . 'admin/js/wpplugin-admin.js',
+  //   ['jquery'],
+  //   time()
+  // );
+
+
+
   wp_register_script(
     'wpplugin-admin',
-    WPPLUGIN_URL . 'admin/js/wpplugin-admin.js',
-    ['jquery'],
+    WPPLUGIN_URL . 'dist/bundle.js',
+    [],
     time()
   );
 
