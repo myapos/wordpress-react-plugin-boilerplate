@@ -14,7 +14,7 @@ function wpplugin_admin_scripts( $hook ) {
 
   wp_register_script(
     'wpplugin-admin',
-    WPPLUGIN_URL . 'dist/bundle.js',
+    WPPLUGIN_URL . 'dist/admin.bundle.js',
     [],
     time()
   );
@@ -35,16 +35,24 @@ add_action( 'admin_enqueue_scripts', 'wpplugin_admin_scripts' );
 // Conditionally load JS on single post pages
 function wpplugin_frontend_scripts() {
 
-  wp_register_script(
+  // wp_register_script(
+  //   'wpplugin-frontend',
+  //   WPPLUGIN_URL . 'frontend/js/wpplugin-frontend.js',
+  //   [],
+  //   time()
+  // );
+
+   wp_register_script(
     'wpplugin-frontend',
-    WPPLUGIN_URL . 'frontend/js/wpplugin-frontend.js',
+    WPPLUGIN_URL . 'dist/frontEnd.bundle.js',
     [],
     time()
   );
 
-  if( is_single() ) {
+  if(is_single() ) {
       wp_enqueue_script( 'wpplugin-frontend','',[],'',true );
   }
 
 }
+
 add_action( 'wp_enqueue_scripts', 'wpplugin_frontend_scripts', 100 );

@@ -14,7 +14,7 @@ import App from './admin/js/components/App';
 //   }
 // });
 
-const placeholder = document.getElementById('root');
+const placeholder = document.getElementById('rootAdmin');
 
 if (placeholder) {
   ReactDOM.render(<App />, placeholder);

@@ -7,7 +7,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './index.js',
+    admin: './admin.js',
+    frontEnd: './frontend.js',
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -30,6 +31,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
+    // filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {

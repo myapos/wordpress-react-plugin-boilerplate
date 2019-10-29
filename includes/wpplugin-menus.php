@@ -22,7 +22,7 @@ function wpplugin_settings_page_markup()
       return;
   }
   ?>
-  <div id="root"></div>
+  <div id="rootAdmin"></div>
 
   <div class="wrap">
       <h1><?php esc_html_e( get_admin_page_title() ); ?></h1>
@@ -39,3 +39,18 @@ function wpplugin_add_settings_link( $links ) {
 }
 $filter_name = "plugin_action_links_" . plugin_basename( __FILE__ );
 add_filter( $filter_name, 'wpplugin_add_settings_link' );
+
+
+// function theme_slug_filter_the_title( $title ) {
+//     $custom_title = ' YOUR CONTENT GOES HERE';
+//     $title .= $custom_title;
+//     return $title;
+// }
+// add_filter( 'the_title', 'theme_slug_filter_the_title' );
+
+function theme_slug_filter_the_content( $content ) {
+    $custom_content = 'YOUR CONTENT GOES HERE<div id="rootFrontEnd"></div>';
+    $custom_content .= $content;
+    return $custom_content;
+}
+add_filter( 'the_content', 'theme_slug_filter_the_content' );
