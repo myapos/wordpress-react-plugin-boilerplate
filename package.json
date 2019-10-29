@@ -2,7 +2,7 @@
 	"name": "my-first-plugin",
 	"version": "1.0.0",
 	"description": "",
-	"main": "admin.js",
+	"main": "frontend.js",
 	"scripts": {
 		"start": "webpack --watch --config  webpack.dev.js --mode development --hot",
 		"build": "PRODUCTION=true webpack --mode production --config webpack.prod.js",

@@ -26,7 +26,7 @@ module.exports = merge(common, {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: `http://localhost:${PORT}/dist/`,
   },
   plugins: [
