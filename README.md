@@ -1,11 +1,11 @@
 # wordpress-react-plugin-boilerplate
 
-# Commands
+### Commands
 
 - `npm run start`
 - `npm run build`
 
-# URLs
+### URLs
 
 You can see live reload feature for both admin and frontend areas through `http://localhost:3000`
 
