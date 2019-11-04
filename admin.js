@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './admin/js/components/App';
+import Root from './admin/js/components/Root';
+import configureStore, { history } from './admin/js/store/store';
 
+const { store, persistor } = configureStore();
 // window.addEventListener('DOMContentLoaded', event => {
 //   console.log('DOM fully loaded and parsed');
 
@@ -17,7 +19,10 @@ import App from './admin/js/components/App';
 const placeholder = document.getElementById('rootAdmin');
 
 if (placeholder) {
-  ReactDOM.render(<App />, placeholder);
+  ReactDOM.render(<Root
+    store={store}
+    persistor={persistor}
+    history={history} />, placeholder);
 } else {
   console.warn('Check your placeholder');
 }
