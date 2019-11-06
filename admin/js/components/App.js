@@ -7,6 +7,7 @@ import * as actions from '../store/actions';
 class App extends Component {
   componentDidMount () {
     this.props.initialization();
+    this.props.getPosts();
   }
   render () {
     return (<div className="container"><h1> React !!! </h1></div>);
@@ -19,4 +20,5 @@ export default connect(
 
 App.propTypes = {
   initialization: PropTypes.func,
+  getPosts: PropTypes.func,
 };

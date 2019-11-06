@@ -17,8 +17,19 @@ function* initialization (action) {
   });
 }
 
+function* getPosts (action) {
+  const state = yield select();
+  const res = yield call(api.getPosts);
+
+  yield put({
+    type: actions.SAGAS_GET_POSTS,
+    posts: res,
+  });
+}
+
 function* rootSaga () {
   yield takeEvery(actions.INITIALIZATION, initialization);
+  yield takeEvery(actions.GET_POSTS, getPosts);
 }
 
 export default rootSaga;
