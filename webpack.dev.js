@@ -37,7 +37,7 @@ module.exports = merge(common, {
       },
     }),
     new BrowserSyncPlugin({
-      files: '**/*.php',
+      files: ['**/*.php', 'css/*.css'],
       proxy: 'http://localhost/wordpress',
     }),
   ],

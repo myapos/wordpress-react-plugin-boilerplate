@@ -1,10 +1,24 @@
 // App.js
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import * as actions from '../store/actions';
 
-const App = () =>
-  <div style={{ textAlign: 'center' }}>
-    <h1>React!</h1>
-  </div>;
+class App extends Component {
+  componentDidMount () {
+    this.props.initialization();
+    this.props.getPosts();
+  }
+  render () {
+    return (<div className="container"><h1> React !!! </h1></div>);
+  }
+}
+export default connect(
+  state => state,
+  actions
+)(App);
 
-export default App
-;
+App.propTypes = {
+  initialization: PropTypes.func,
+  getPosts: PropTypes.func,
+};
