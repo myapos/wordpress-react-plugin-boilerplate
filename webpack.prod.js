@@ -17,7 +17,8 @@ const conf = merge(common, {
   },
   output: {
     // path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    // publicPath: '/',
+    publicPath: '../wp-content/plugins/wordpress-react-plugin-boilerplate/dist/', // path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
