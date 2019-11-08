@@ -1,5 +1,8 @@
 # wordpress-react-plugin-boilerplate
 
+### Description
+
+This repo is a boilerplate for developing a plugin with Wordpress CMS combined with React and other libraries of React Ecosystem such as Redux, Sagas, Stylus, Webpack. It provides a way to develop interfaces both for admin and frontend sides.
 ### Commands
 
 - `npm run start`
