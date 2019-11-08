@@ -8,7 +8,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 // import hist from '../helpers/history';
 import App from './App';
 
-// import('../../css/css.styl');
+import('../../css/css.styl');
 
 // import('../css/bootstrap.all.min.css');
 

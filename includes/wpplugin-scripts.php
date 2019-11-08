@@ -10,8 +10,6 @@ function wpplugin_admin_scripts( $hook ) {
   //   time()
   // );
 
-
-
   wp_register_script(
     'wpplugin-admin',
     WPPLUGIN_URL . 'dist/admin.bundle.js',
@@ -41,6 +39,38 @@ function wpplugin_frontend_scripts() {
   //   [],
   //   time()
   // );
+
+   $path = WPPLUGIN_PATH . 'dist/';
+
+  if ($handle = opendir($path)) {
+
+    /* This is the correct way to loop over the directory. */
+    while (false !== ($entry = readdir($handle))) {
+        /* filter css files */
+        preg_match('/\d+.bundle.js/', $entry, $matches);
+        if(sizeof($matches) > 0) {
+
+          // enqueue each match
+          foreach ($matches as $key => $match) {
+
+            $jsPath =  WPPLUGIN_URL .'dist/'.$entry;
+             wp_register_style(
+               $jsPath,
+               $jsPath,
+              [],
+              time()
+            );
+
+            if( 'toplevel_page_wpplugin' == $hook ) {
+              wp_enqueue_style($jsPath );
+            }
+          }
+        }
+
+    }
+
+    closedir($handle);
+  }
 
    wp_register_script(
     'wpplugin-frontend',

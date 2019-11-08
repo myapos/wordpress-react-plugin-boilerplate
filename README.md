@@ -21,3 +21,4 @@ To get all posts in localhostvisit url `http://localhost/wordpress/index.php/wp-
 - `https://stackoverflow.com/questions/34670533/wordpress-rest-api-wp-api-404-error`
 - `https://www.digitalocean.com/community/tutorials/how-to-embed-a-react-application-in-wordpress-on-ubuntu-18-04`
 - `https://www.elegantthemes.com/blog/wordpress/react-js-for-wordpress-users-a-basic-introduction`
+- `https://wordpress.stackexchange.com/questions/276890/how-to-enqueue-every-script-in-a-folder-automatically/276897`
