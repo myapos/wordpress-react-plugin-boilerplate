@@ -16,7 +16,7 @@ You can see live reload feature for both admin and frontend areas through `http:
 
 ### API example
 
-To get all posts in localhostvisit url `http://localhost/wordpress/index.php/wp-json/wp/v2/posts`
+To get all posts in localhost visit url `http://localhost/wordpress/index.php/wp-json/wp/v2/posts`
 
 ### Useful links
 
