@@ -25,7 +25,7 @@ module.exports = {
       banner: `@Build ${new Date().toLocaleString()}`,
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
+      filename: '[name].css',
       chunkFilename: '[id].css',
     }),
   ],

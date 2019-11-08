@@ -14,6 +14,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define( 'WPPLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'WPPLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
 // Enqueue Plugin CSS
 include( plugin_dir_path( __FILE__ ) . 'includes/wpplugin-styles.php');
