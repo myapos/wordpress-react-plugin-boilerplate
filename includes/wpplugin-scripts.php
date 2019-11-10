@@ -54,16 +54,26 @@ function wpplugin_frontend_scripts() {
           foreach ($matches as $key => $match) {
 
             $jsPath =  WPPLUGIN_URL .'dist/'.$entry;
-             wp_register_style(
-               $jsPath,
-               $jsPath,
+            //  wp_register_style(
+            //    $jsPath,
+            //    $jsPath,
+            //   [],
+            //   time()
+            // );
+
+            // if( 'toplevel_page_wpplugin' == $hook ) {
+            //   wp_enqueue_style($jsPath );
+            // }
+
+             if(is_single() ) {
+                  wp_enqueue_script( $jsPath,'',[],'',true );
+              }
+              wp_register_script(
+              $match,
+              $jsPath,
               [],
               time()
             );
-
-            if( 'toplevel_page_wpplugin' == $hook ) {
-              wp_enqueue_style($jsPath );
-            }
           }
         }
 
